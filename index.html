@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+     <link rel="stylesheet" href="https://uat.medikit.com.mx/static/css/libs/medikit-signature.min.css">
+     <script type="text/javascript"src="https://uat.medikit.com.mx/js/libs/html2canvas.min.js"></script>
+     <script type="text/javascript" src="https://uat.medikit.com.mx/js/libs/medikit-signature.min.js"></script>
+
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+  <button onclick="myFunction()">Click me</button>
+
+
+<script>
+function myFunction() {
+
+
+var requestData = {
+nombreDoctor: 'Miguel Angel Olvera Tellez',
+idDoctor: '0011b00000u3EcOAAU',
+cedula: '123123123',
+idConsulta: 'a271b000000T5W9AAK',
+nombrePaciente: 'Edgardo Bustamante',
+cliente: 'consultorio'
+};
+
+	mkSignatureInit(requestData)
+	 .then((successData) => {
+	console.log(successData);
+	})
+	 .catch(function(e) {
+	console.log(e.error);
+	});
+
+}
+</script>
+
+</body>
+</html>
